@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Polimorfismo</title>
+        <meta charset= "UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" 	href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="homepage.html">Home</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a a href="heranca.html"> Herança</a></li>
+                                <li><a href="polimorfismo.html">Polimorfismo</a></li>
+                                <li><a href="sobrecarga.html">Sobrecarga</a></li>
+                                <li><a href="encapsulamento.html">Encapsulamento</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+        <div class="container">
+            <h1>Polimorfismo</h1>
+            <br><br>
+            <p>Polimorfismo, que vem do grego "muitas formas". É o termo definido em linguagens orientadas a objeto - como o Java - para a possibilidade de se usar o mesmo elemento de forma diferente.</p>
+            <br>
+            <p>Especificamente em Java, polimorfismo se encontra no fato de podemos modificar totalmente o código de um método herdado de uma classe diferente, ou seja, sobrescrevemos o método da classe pai.</p>
+            <br>
+            <p>Portanto, polimorfismo está intimamente ligado a herança de classes.</p>
+            <br>
+            <p>Um pequeno exemplo para simplificar essa característica segue abaixo:</p>
+            <br>
+            <ul>
+                <li>Classe 1 possui 2 métodos: métodoA() e métodoB().              </li>
+                <li>Classe 2 herda a classe 1                                      </li>
+                <li>Classe 2 reescreve todo o métodoA() que pertence a classe 1.   </li>
+            </ul>             
+            <br>
+            <p>Sabemos que toda classe em Java herda implicitamente a classe Object. A classe Object possui alguns métodos, dentre eles o método toString().</p>
+            <p>O método toString() original, descreve qual instância de objeto está sendo utilizada. Resumidamente, ele cria um texto com o nome da classe mais um código hexadecimal que cada instância possui diferente de outra, chamado hash code (é como um RG daquela instância).</p>
+            <p>Então, se tivéssemos a classe TV dentro do pacote tiexpert e usássemos o comando: System.out.println (tv1.toString()). O que apareceria no console seria algo como: tiexpert.TV@c17124.</p>
+            <p>Então o que faremos para melhorar será usar o polimorfismo para sobrescrever o método toString(), colocando o texto da forma que desejarmos.</p>
+
+            <img src="imgs/polimorfismo.png" class="img-rounded img">
+
+            <br><br><br>
+            <p>Agora, o resultado da linha System.out.println (tv1.toString()) não será mais:</p>
+            <img src="imgs/polimorfismo1.png" class="img-rounded img">
+
+            <br><br><br><br>
+
+            <h3> Compiladores </h3>
+            <a href=" https://netbeans.org/" class="btn btn-info"> NetBeans </a>
+            <a href="https://eclipse.org/" class="btn btn-info"> Eclipse </a>
+            <a href="https://www.embarcadero.com/" class="btn btn-info"> JBuilder </a>
+            <a href="http://www.jedit.org/index.php?page=download" class="btn btn-info"> JEdit </a>
+            <a href="http://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html" class="btn btn-info"> Jdesenvolper </a>
+        </div>
+
+    </body>
+</html>

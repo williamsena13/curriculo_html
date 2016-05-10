@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>encapsulamento</title>
+        <meta charset= "UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" 	href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="homepage.html">Home</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a a href="heranca.html"> Herança</a></li>
+                                <li><a href="polimorfismo.html">Polimorfismo</a></li>
+                                <li><a href="sobrecarga.html">Sobrecarga</a></li>
+                                <li><a href="encapsulamento.html">Encapsulamento</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+        <div class="container">
+            <h1>Encapsulamento</h1>
+            <br><br>
+
+            <p>Se outros programadores usam nossa classe, nós queremos garantir que erros pelo mau uso não ocorram. Encapsulamento serve para controlar o acesso aos atributos e métodos de uma classe.</p2>
+
+
+            <p>É uma forma eficiente de proteger os dados manipulados dentro da classe, além de determinar onde esta classe poderá ser manipulada.</p>
+
+
+            <p>Usamos o nível de acesso mais restritivo que faça sentido para um membro particular. Sempre usamos private, a menos que tenhamos um bom motivo para deixá-lo com outro nível de acesso.</p>
+
+            <p>Não devemos permitir o acesso público aos membros, exceto em caso de ser constantes. Isso porque membros públicos tendem a nos ligar a uma implementação em particular e limita a nossa flexibilidade em mudar o código.</p>
+
+            <p2>Basicamente, usamos quatro tipos de encapsulamento que são divididos em dois níveis:</p2>
+
+            <ul>
+                <li>Nível de classe ou topo: Quando determinamos o acesso de uma classe inteira que pode ser public ou package-private (padrão);</li>
+                <li>Nível de membro: Quando determinamos o acesso de atributos ou métodos de uma classe que podem ser public, private, protected ou package-private (padrão).</li>
+            </ul>
+            <br>
+
+            <p>Para utilizarmos estes modificadores de acesso, basta que nós os digitemos antes do nome da variável, atributo, método, função ou classe, com exceção de package-private, que é entendido como padrão, portanto, é qualquer membro ou classe que não tenha modificador especificado.</p>
+
+            <p1>Exemplo:</p1>
+            <br>
+
+            <img src="imgs/encapsulamento.png" class="img-rounded img">
+            <br><br>
+
+            <p2> Public </p2>
+            <p>O modificador public deixará visível a classe ou membro para todas as outras classes, subclasses e pacotes do projeto Java.</p>
+
+            <p2> Private </p2>
+            <p>O modificador private deixará visível o atributo apenas para a classe em que este atributo se encontra.</p>
+
+            <p2> Protected </p2>
+            <p>O modificador protected deixará visível o atributo para todas as outras classes e subclasses que pertencem ao mesmo pacote. A principal diferença é que apenas as classes do mesmo pacote tem acesso ao membro. O pacote da subclasse não tem acesso ao membro.</p>
+
+            <p2> Sem modificador (Padrão) </p2>
+            <p>Por padrão, a linguagem Java permite acesso aos membros apenas ao pacote em que ele se encontra.</p>
+
+            <br>
+            <p3>De forma ilustrativa, abaixo está uma tabela demonstrando todas estas características.</p3>
+
+
+            <table class="table table-bordered table-hover table-striped">
+                <tr>
+                    <td> Modificador    </td>
+                    <td> Classe         </td>
+                    <td> Pacote         </td>
+                    <td> Subclasse      </td>
+                    <td> Globalmente    </td>
+                </tr>
+
+                <tr>
+                    <td> Public </td>
+                    <td> sim    </td>
+                    <td> sim    </td>
+                    <td> sim    </td>
+                    <td> sim    </td>
+
+                </tr>
+
+                <tr>
+                    <td> Protected </td>
+                    <td> sim       </td>
+                    <td> sim       </td>
+                    <td> sim       </td>
+                    <td> não       </td>
+                </tr>
+
+                <tr>
+                    <td> Padrão </td>
+                    <td> sim    </td>
+                    <td> sim    </td>
+                    <td> não    </td>
+                    <td> não    </td>
+                </tr>
+
+                <tr>
+                    <td> Private </td>
+                    <td> sim     </td>
+                    <td> não     </td>
+                    <td> não     </td>
+                    <td> não     </td>
+                </tr>
+
+            </table>
+            <br><br>
+            <h3> Compiladores </h3>
+            <a href=" https://netbeans.org/" class="btn btn-info"> NetBeans </a>
+            <a href="https://eclipse.org/" class="btn btn-info"> Eclipse </a>
+            <a href="https://www.embarcadero.com/" class="btn btn-info"> JBuilder </a>
+            <a href="http://www.jedit.org/index.php?page=download" class="btn btn-info"> JEdit </a>
+            <a href="http://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html" class="btn btn-info"> Jdesenvolper </a>
+        </div>
+
+    </body>
+</html>

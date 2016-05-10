@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+	<title>Sobrecarga</title>
+	<meta charset= "UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" 	href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </head>
+    
+<body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="homepage.html">Home</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a a href="heranca.html"> Herança</a></li>
+                                <li><a href="polimorfismo.html">Polimorfismo</a></li>
+                                <li><a href="sobrecarga.html">Sobrecarga</a></li>
+                                <li><a href="encapsulamento.html">Encapsulamento</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        </nav>
+
+        <div class="container">
+            <h1> Sobrecarga </h1>
+            <br><br>    
+            
+            <h2>Sobrecarga de métodos</h2>
+            
+            <p>
+                Java nos permite criar vários métodos com o mesmo nome desde que tenham parâmetros diferentes. Isso é o que chamamos de sobrecarga de métodos.
+            </p>
+                        
+            <p> 
+                A sobrecarga de métodos consiste em criarmos o mesmo método com possibilidades de entradas diferentes. Essas entradas, caracterizadas como parâmetros, devem sempre ser de tipos diferentes, quantidades de parâmetros diferentes ou posições dos tipos diferentes.            
+            </p>
+            <br>
+            
+            <p> 
+                Para visualizarmos um cenário, vejamos a classe abaixo:      
+            </p> 
+
+                    
+            <img src="imgs/sobrecarga1.png" class="img-rounded img">
+            <br><br><br>
+            
+            <p>
+                Agora, criaremos o método ligar. O método ligar, simplesmente, muda o valor dos atributos canal e volume para 3 e 25, respectivamente.
+            </p>
+                        
+            <img src="imgs/sobrecarga2.png" class="img-rounded img">
+            <br><br><br>
+            
+            <p>Agora, vamos personalizar este método para que ele mude o atributo ligada de acordo com o parâmetro. </p>
+            
+            <img src="imgs/sobrecarga3.png" class="img-rounded img">
+            <br><br><br>
+            
+            <p>Poderíamos utilizar ambos os métodos na mesma classe se quisermos, porque um possui argumentos e o outro não.</p>
+            
+            <img src="imgs/sobrecarga4.png" class="img-rounded img">
+            <br><br><br>
+            
+            <p>Porém, o mesmo não pode ser aplicado aos atributos canal e volume. Porque não é possível criar um método que recebe um inteiro e criar um outro método com o mesmo nome que também recebe um inteiro, mesmo que estes dois inteiros sejam totalmente diferentes. Se visualizarmos como Java interpreta o método, veríamos:</p>
+            <p style="text-align: center">void ligar (int volume) = void ligar (int canal)  
+                <br>
+                void ligar (int) = void ligar (int)               
+            </p>
+            
+            
+            <img src="imgs/sobrecarga5.png" class="img-rounded img">
+            <br><br>
+            
+            
+            <h3> Compiladores </h3>
+                <a href=" https://netbeans.org/" class="btn btn-info"> NetBeans </a>
+                <a href="https://eclipse.org/" class="btn btn-info"> Eclipse </a>
+                <a href="https://www.embarcadero.com/" class="btn btn-info"> JBuilder </a>
+                <a href="http://www.jedit.org/index.php?page=download" class="btn btn-info"> JEdit </a>
+                <a href="http://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html" class="btn btn-info"> Jdesenvolper </a>
+    
+        </div>
+        
+        
+    </body>
+</html>
