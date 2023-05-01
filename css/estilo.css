@@ -38,3 +38,11 @@ p2,p3,p4 {
 	line-height: 20px;
 }
 
+hr {
+	width: 100%; 
+	margin-left: auto;
+	margin-right: auto;
+	height: 1px;
+	background-color: #666; 
+	opacity: 0.5;
+}
